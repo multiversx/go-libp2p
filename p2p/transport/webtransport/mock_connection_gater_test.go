@@ -8,10 +8,10 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	control "github.com/libp2p/go-libp2p/core/control"
-	network "github.com/libp2p/go-libp2p/core/network"
-	peer "github.com/libp2p/go-libp2p/core/peer"
 	multiaddr "github.com/multiformats/go-multiaddr"
+	control "github.com/multiversx/go-libp2p/core/control"
+	network "github.com/multiversx/go-libp2p/core/network"
+	peer "github.com/multiversx/go-libp2p/core/peer"
 )
 
 // MockConnectionGater is a mock of ConnectionGater interface.

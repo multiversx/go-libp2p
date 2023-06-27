@@ -1,14 +1,14 @@
 package libp2p
 
 import (
-	"github.com/libp2p/go-libp2p/core/protocol"
-	"github.com/libp2p/go-libp2p/p2p/host/autonat"
-	rcmgr "github.com/libp2p/go-libp2p/p2p/host/resource-manager"
-	circuit "github.com/libp2p/go-libp2p/p2p/protocol/circuitv2/proto"
-	relayv2 "github.com/libp2p/go-libp2p/p2p/protocol/circuitv2/relay"
-	"github.com/libp2p/go-libp2p/p2p/protocol/holepunch"
-	"github.com/libp2p/go-libp2p/p2p/protocol/identify"
-	"github.com/libp2p/go-libp2p/p2p/protocol/ping"
+	"github.com/multiversx/go-libp2p/core/protocol"
+	"github.com/multiversx/go-libp2p/p2p/host/autonat"
+	rcmgr "github.com/multiversx/go-libp2p/p2p/host/resource-manager"
+	circuit "github.com/multiversx/go-libp2p/p2p/protocol/circuitv2/proto"
+	relayv2 "github.com/multiversx/go-libp2p/p2p/protocol/circuitv2/relay"
+	"github.com/multiversx/go-libp2p/p2p/protocol/holepunch"
+	"github.com/multiversx/go-libp2p/p2p/protocol/identify"
+	"github.com/multiversx/go-libp2p/p2p/protocol/ping"
 )
 
 // SetDefaultServiceLimits sets the default limits for bundled libp2p services

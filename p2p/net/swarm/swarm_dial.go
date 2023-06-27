@@ -7,14 +7,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/libp2p/go-libp2p/core/canonicallog"
-	"github.com/libp2p/go-libp2p/core/network"
-	"github.com/libp2p/go-libp2p/core/peer"
-	"github.com/libp2p/go-libp2p/core/peerstore"
-	"github.com/libp2p/go-libp2p/core/transport"
 	ma "github.com/multiformats/go-multiaddr"
 	madns "github.com/multiformats/go-multiaddr-dns"
 	manet "github.com/multiformats/go-multiaddr/net"
+	"github.com/multiversx/go-libp2p/core/canonicallog"
+	"github.com/multiversx/go-libp2p/core/network"
+	"github.com/multiversx/go-libp2p/core/peer"
+	"github.com/multiversx/go-libp2p/core/peerstore"
+	"github.com/multiversx/go-libp2p/core/transport"
 	"github.com/quic-go/quic-go"
 )
 

@@ -10,9 +10,9 @@ import (
 	"time"
 
 	"github.com/benbjohnson/clock"
-	ic "github.com/libp2p/go-libp2p/core/crypto"
 	ma "github.com/multiformats/go-multiaddr"
 	"github.com/multiformats/go-multihash"
+	ic "github.com/multiversx/go-libp2p/core/crypto"
 )
 
 // Allow for a bit of clock skew.

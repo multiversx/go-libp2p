@@ -3,8 +3,8 @@ package obs
 import (
 	"strings"
 
-	rcmgr "github.com/libp2p/go-libp2p/p2p/host/resource-manager"
-	"github.com/libp2p/go-libp2p/p2p/metricshelper"
+	rcmgr "github.com/multiversx/go-libp2p/p2p/host/resource-manager"
+	"github.com/multiversx/go-libp2p/p2p/metricshelper"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

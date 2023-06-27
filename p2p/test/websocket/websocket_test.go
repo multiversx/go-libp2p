@@ -5,9 +5,9 @@ import (
 	"io"
 	"testing"
 
-	"github.com/libp2p/go-libp2p"
-	"github.com/libp2p/go-libp2p/core/network"
-	"github.com/libp2p/go-libp2p/core/peer"
+	"github.com/multiversx/go-libp2p"
+	"github.com/multiversx/go-libp2p/core/network"
+	"github.com/multiversx/go-libp2p/core/peer"
 	"github.com/stretchr/testify/require"
 )
 

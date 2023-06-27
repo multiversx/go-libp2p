@@ -13,12 +13,12 @@ import (
 	"testing"
 	"time"
 
-	ic "github.com/libp2p/go-libp2p/core/crypto"
-	"github.com/libp2p/go-libp2p/core/network"
-	mocknetwork "github.com/libp2p/go-libp2p/core/network/mocks"
-	"github.com/libp2p/go-libp2p/core/peer"
-	tpt "github.com/libp2p/go-libp2p/core/transport"
-	"github.com/libp2p/go-libp2p/p2p/transport/quicreuse"
+	ic "github.com/multiversx/go-libp2p/core/crypto"
+	"github.com/multiversx/go-libp2p/core/network"
+	mocknetwork "github.com/multiversx/go-libp2p/core/network/mocks"
+	"github.com/multiversx/go-libp2p/core/peer"
+	tpt "github.com/multiversx/go-libp2p/core/transport"
+	"github.com/multiversx/go-libp2p/p2p/transport/quicreuse"
 
 	"github.com/golang/mock/gomock"
 	ma "github.com/multiformats/go-multiaddr"

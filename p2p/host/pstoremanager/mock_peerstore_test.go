@@ -10,10 +10,10 @@ import (
 	time "time"
 
 	gomock "github.com/golang/mock/gomock"
-	crypto "github.com/libp2p/go-libp2p/core/crypto"
-	peer "github.com/libp2p/go-libp2p/core/peer"
-	protocol "github.com/libp2p/go-libp2p/core/protocol"
 	multiaddr "github.com/multiformats/go-multiaddr"
+	crypto "github.com/multiversx/go-libp2p/core/crypto"
+	peer "github.com/multiversx/go-libp2p/core/peer"
+	protocol "github.com/multiversx/go-libp2p/core/protocol"
 )
 
 // MockPeerstore is a mock of Peerstore interface.

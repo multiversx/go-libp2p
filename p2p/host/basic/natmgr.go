@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/libp2p/go-libp2p/core/network"
-	inat "github.com/libp2p/go-libp2p/p2p/net/nat"
+	"github.com/multiversx/go-libp2p/core/network"
+	inat "github.com/multiversx/go-libp2p/p2p/net/nat"
 
 	ma "github.com/multiformats/go-multiaddr"
 )

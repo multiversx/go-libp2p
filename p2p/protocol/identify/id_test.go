@@ -8,25 +8,25 @@ import (
 	"testing"
 	"time"
 
-	"github.com/libp2p/go-libp2p"
-	ic "github.com/libp2p/go-libp2p/core/crypto"
-	"github.com/libp2p/go-libp2p/core/event"
-	"github.com/libp2p/go-libp2p/core/host"
-	"github.com/libp2p/go-libp2p/core/network"
-	"github.com/libp2p/go-libp2p/core/peer"
-	"github.com/libp2p/go-libp2p/core/peerstore"
-	"github.com/libp2p/go-libp2p/core/protocol"
-	"github.com/libp2p/go-libp2p/core/record"
-	coretest "github.com/libp2p/go-libp2p/core/test"
-	basichost "github.com/libp2p/go-libp2p/p2p/host/basic"
-	blhost "github.com/libp2p/go-libp2p/p2p/host/blank"
-	"github.com/libp2p/go-libp2p/p2p/host/eventbus"
-	"github.com/libp2p/go-libp2p/p2p/host/peerstore/pstoremem"
-	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
-	"github.com/libp2p/go-libp2p/p2p/net/swarm"
-	swarmt "github.com/libp2p/go-libp2p/p2p/net/swarm/testing"
-	"github.com/libp2p/go-libp2p/p2p/protocol/identify"
-	"github.com/libp2p/go-libp2p/p2p/protocol/identify/pb"
+	"github.com/multiversx/go-libp2p"
+	ic "github.com/multiversx/go-libp2p/core/crypto"
+	"github.com/multiversx/go-libp2p/core/event"
+	"github.com/multiversx/go-libp2p/core/host"
+	"github.com/multiversx/go-libp2p/core/network"
+	"github.com/multiversx/go-libp2p/core/peer"
+	"github.com/multiversx/go-libp2p/core/peerstore"
+	"github.com/multiversx/go-libp2p/core/protocol"
+	"github.com/multiversx/go-libp2p/core/record"
+	coretest "github.com/multiversx/go-libp2p/core/test"
+	basichost "github.com/multiversx/go-libp2p/p2p/host/basic"
+	blhost "github.com/multiversx/go-libp2p/p2p/host/blank"
+	"github.com/multiversx/go-libp2p/p2p/host/eventbus"
+	"github.com/multiversx/go-libp2p/p2p/host/peerstore/pstoremem"
+	mocknet "github.com/multiversx/go-libp2p/p2p/net/mock"
+	"github.com/multiversx/go-libp2p/p2p/net/swarm"
+	swarmt "github.com/multiversx/go-libp2p/p2p/net/swarm/testing"
+	"github.com/multiversx/go-libp2p/p2p/protocol/identify"
+	"github.com/multiversx/go-libp2p/p2p/protocol/identify/pb"
 
 	mockClock "github.com/benbjohnson/clock"
 	logging "github.com/ipfs/go-log/v2"
@@ -79,7 +79,7 @@ func testHasProtocolVersions(t *testing.T, h host.Host, p peer.ID) {
 		t.Error("protocol mismatch", err)
 	}
 	v, err = h.Peerstore().Get(p, "AgentVersion")
-	if v.(string) != "github.com/libp2p/go-libp2p" { // this is the default user agent
+	if v.(string) != "github.com/multiversx/go-libp2p" { // this is the default user agent
 		t.Error("agent version mismatch", err)
 	}
 }
