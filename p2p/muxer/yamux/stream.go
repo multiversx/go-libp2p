@@ -3,6 +3,7 @@ package yamux
 import (
 	"time"
 
+	logging "github.com/ipfs/go-log/v2"
 	"github.com/libp2p/go-libp2p/core/network"
 
 	"github.com/libp2p/go-yamux/v4"
@@ -12,10 +13,12 @@ import (
 type stream yamux.Stream
 
 var _ network.MuxedStream = &stream{}
+var log = logging.Logger("yamux")
 
 func (s *stream) Read(b []byte) (n int, err error) {
 	n, err = s.yamux().Read(b)
 	if err == yamux.ErrStreamReset {
+		log.Debugf("stream.Read error: %s", err)
 		err = network.ErrReset
 	}
 
@@ -25,6 +28,7 @@ func (s *stream) Read(b []byte) (n int, err error) {
 func (s *stream) Write(b []byte) (n int, err error) {
 	n, err = s.yamux().Write(b)
 	if err == yamux.ErrStreamReset {
+		log.Debugf("stream.Write error: %s", err)
 		err = network.ErrReset
 	}
 

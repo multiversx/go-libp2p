@@ -21,6 +21,7 @@ var _ network.MuxedStream = &stream{}
 func (s *stream) Read(b []byte) (n int, err error) {
 	n, err = s.Stream.Read(b)
 	if err != nil && errors.Is(err, &quic.StreamError{}) {
+		log.Debugf("stream.Read error: %s", err)
 		err = network.ErrReset
 	}
 	return n, err
@@ -29,6 +30,7 @@ func (s *stream) Read(b []byte) (n int, err error) {
 func (s *stream) Write(b []byte) (n int, err error) {
 	n, err = s.Stream.Write(b)
 	if err != nil && errors.Is(err, &quic.StreamError{}) {
+		log.Debugf("stream.Write error: %s", err)
 		err = network.ErrReset
 	}
 	return n, err
