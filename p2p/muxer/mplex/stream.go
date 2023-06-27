@@ -3,6 +3,7 @@ package mplex
 import (
 	"time"
 
+	logging "github.com/ipfs/go-log/v2"
 	"github.com/multiversx/go-libp2p/core/network"
 
 	mp "github.com/libp2p/go-mplex"
@@ -12,10 +13,12 @@ import (
 type stream mp.Stream
 
 var _ network.MuxedStream = &stream{}
+var log = logging.Logger("mplex")
 
 func (s *stream) Read(b []byte) (n int, err error) {
 	n, err = s.mplex().Read(b)
 	if err == mp.ErrStreamReset {
+		log.Debugf("stream.Read error: %s", err)
 		err = network.ErrReset
 	}
 
@@ -25,6 +28,7 @@ func (s *stream) Read(b []byte) (n int, err error) {
 func (s *stream) Write(b []byte) (n int, err error) {
 	n, err = s.mplex().Write(b)
 	if err == mp.ErrStreamReset {
+		log.Debugf("stream.Write error: %s", err)
 		err = network.ErrReset
 	}
 
